@@ -81,6 +81,7 @@ class Tool(object):
         import time
         start_time = time.time()
         gdal.UseExceptions()
+        gdal.AllRegister()
         # path to gdal data directory
         gdal.SetConfigOption("GDAL_DATA", "C:\\Program Files\\GDAL\\gdal-data")
 
