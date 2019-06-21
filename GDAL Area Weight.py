@@ -155,7 +155,7 @@ class Tool(object):
             geotransform = dataset.GetGeoTransform()
             dataset = None
             area = geotransform[1] * abs(geotransform[5])
-            numList = [outWorkspace, str(int(attrs)), ".txt"]
+            numList = [outWorkspace, str(attrs), ".txt"]
             seperator = ''
             sum = 0
             filename1 = seperator.join(numList)
@@ -164,9 +164,9 @@ class Tool(object):
             else:
                 ""
             file1 = open(filename1, "a")
-            # L = [str(int(attrs))]
+            # L = [str(attrs)]
             # seperator = ''
-            file1.write(str(int(attrs)))
+            file1.write(str(attrs))
             for h in range(len(buckets)):
                 if buckets[h] > 0:
                     buckets[h] = buckets[h] * area
